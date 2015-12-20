@@ -1,0 +1,173 @@
+.navbar {
+  @include border-radius(0);
+  padding: 8px 0;
+  margin: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 50px;
+  position: fixed;
+  z-index: 99999999;
+  background: #fff;
+  @include transition(0.1s, min-height, ease-in-out);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+
+  @media (min-width: $screen-sm) {
+    box-shadow: none;
+    min-height: 100px;
+  }
+
+  & .navbar-nav > li {
+  	&.active{
+  		a {
+          background: $primary-color;
+          text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.9);
+          @include border-radius(4px);
+          color: white;
+        }
+  	}
+  }
+
+  & .navbar-nav > li > a {
+    @include transition(0.1s, all, ease-in-out);
+    @include border-radius(4px);
+  }
+
+  &-toggle {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: 2px;
+
+    &__label {
+      margin-right: 0;
+      margin-top: -6px;
+      font-size: 1.4rem;
+      position: absolute;
+      right: 26px;
+      top: 10px;
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+
+  &-collapse {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    @media (min-width: $screen-sm) {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  a {
+    color: $primary-color;
+    & .caret {
+      border-top: 4px dashed $secondary-color-variant1;
+    }
+  }
+
+  &-nav {
+    > li {
+      font-size: 1.1rem;
+      .dropdown {
+        &-menu {
+          font-size: 1.4rem;
+          text-transform: none;
+          border: 0;
+          background: #eeeeee;
+          margin-top: -28px;
+          margin-right: 4px;
+          @include border-radius(5px 0 5px 5px);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          & > li {
+            letter-spacing: 0;
+            font-size: 1.5rem;
+            text-decoration: none;
+            & a {
+              text-decoration: none;
+            }
+            & a:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+
+      &.open {
+        a {
+          @include border-radius(5px 5px 0 0);
+        }
+      }
+      > a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 4px 7px;
+        margin: 10px 2px;
+        line-height: 19px;
+
+        @media (min-width: $screen-xs) {
+          margin: 28px 4px;
+        }
+
+        @media (min-width: $screen-lg) {
+          margin: 28px 4px;
+        }
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  float: left;
+  padding: 8px 0 0 15px;
+  overflow: hidden;
+  position: absolute;
+  height: 45px;
+  margin-left: -75px;
+  top: -5px;
+  @include transition(0.075s, all, ease-in-out);
+
+  @media (min-width: $screen-sm) {
+    margin-left: -87px;
+    left: auto;
+    position: relative;
+    height: auto;
+  }
+}
+
+.smallnav {
+  min-height: 50px;
+  border-bottom: 1px solid $grey-color-1;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+  & .navbar-nav > li > a {
+    margin: 2px 4px;
+  }
+
+  & .navbar-nav {
+    & .dropdown-menu {
+      margin-top: -2px;
+    }
+  }
+  & .collapse {
+    //background: none;
+  }
+  .navbar-brand {
+    float: left;
+    //padding: 8px 0 0 21px;
+    overflow: hidden;
+    position: absolute;
+    height: 40px;
+    top: -5px;
+    @media (min-width: $screen-sm) {
+      margin-left: -87px !important;
+    }
+  }
+}

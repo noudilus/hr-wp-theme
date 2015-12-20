@@ -1,0 +1,135 @@
+.hero {
+  background: url('../images/bg1.jpg') no-repeat center center;
+  background-size: 1065px;
+  overflow: hidden;
+  position: relative;
+  right: 0;
+  z-index: 1;
+
+  height: 475px;
+  margin: 0;
+
+  @media(min-width: $screen-sm) {
+    background-size: cover;
+    height: 575px;
+    margin: 68px auto 0 auto;
+  }
+
+  &::before {
+    content: " ";
+    opacity: 0.8;
+    height: 40%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  &::after {
+    content: " ";
+    background-image: linear-gradient(transparent, #000);
+    opacity: 0.75;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+.proposition {
+  z-index: 2;
+  position: relative;
+  color: white;
+  padding: 225px 0;
+
+  @media (min-width: $screen-xs-min) {
+    padding: 140px 0;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    text-align: center;
+  }
+
+  @media (min-width: $screen-md-min) {
+    text-align: left;
+  }
+
+  &__title {
+    color: white;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+
+    &--italic {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    @media (min-width: $screen-xs-min) {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+
+  &__subtitle {
+    color: white;
+    font-size: 2rem;
+    line-height: 1em;
+    display: block;
+    margin-bottom: 35px;
+    margin-top: 5px;
+    opacity: 0.8;
+
+    @media (min-width: $screen-xs-min) {
+      font-size: 2rem;
+    }
+  }
+
+  &__cta {
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    padding-bottom: 4px;
+    padding-right: 15px;
+    margin-right: 25px;
+    border-bottom: 2px solid $secondary-color;
+    @include transition(0.20s, all, ease-in-out);
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      border-color: lighten($secondary-color, 25%);
+      color: white;
+    }
+
+    &:after {
+      content: " " + "\f105";
+      font-family: 'FontAwesome';
+      width: 8px;
+      height: 13px;
+      top: 50%;
+      margin-top: -16px;
+      position: absolute;
+      right: 0;
+      font-size: 21px;
+
+      @media (min-width: $screen-xs-min) {
+        margin-top: -17px;
+      }
+    }
+
+    @media (min-width: $screen-xs-min) {
+      width: auto;
+      margin-top: 0;
+      display: inline;
+    }
+  }
+}
+
