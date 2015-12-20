@@ -1,0 +1,43 @@
+.streamerbox {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  border-bottom: 1px solid $grey-color-1;
+  border-top: 1px solid $grey-color-1;
+
+  @media (min-width: $screen-md-min) {
+    padding-top: 10px;
+    border-top: none;
+  }
+}
+
+.streamer {
+  &__title {
+    font-size: 2.2rem;
+    color: #929292;
+    text-align: center;
+
+    &--phone {
+      display: block;
+      @media (min-width: $screen-xs-min) {
+        display: inline;
+      }
+    }
+
+    & .fa {
+      position: relative;
+      top: 3px;
+      font-size: 2.5rem;
+      right: -5px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      color: $secondary-color;
+    }
+
+    & strong{
+      color: #000;
+    }
+  }
+}

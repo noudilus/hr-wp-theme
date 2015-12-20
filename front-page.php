@@ -51,6 +51,20 @@
 		</div>
 	</section>
 
+	<div class="streamerbox">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="streamer">
+						<div class="streamer__title">
+							Wij zijn dag en nacht voor u bereikbaar op <span class="streamer__title--phone"><i class="fa fa-phone"></i> <strong>040780 8000</strong></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 		<fieldset>
 			<input type="text" class="query" name="s" value="<?php the_search_query(); ?>" title="Typ hier je zoekopdracht..."  />
