@@ -1,0 +1,65 @@
+.highlighted {
+  overflow: hidden;
+}
+
+.highlightblock {
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  // float: left;
+
+  @media (min-width: 645px) {
+    width: 66.3%;
+  }
+}
+
+.highlightbox {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-xs-min) {
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  &__subtitle {
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+    color: $secondary-color;
+    margin-bottom: 16px;
+    margin-top: 6px;
+  }
+
+  &__copy {
+    font-size: 1.6rem;
+    color: #929292;
+  }
+
+  &__image {
+    img {
+      @include border-radius(5px 5px 0 0);
+      background-size: cover;
+      width: 100%;
+      margin-right: 20px;
+
+      @include clearfix;
+    }
+  }
+
+  &__inner {
+    @include border-radius(5px 5px 0 0);
+    height: auto;
+    padding: 20px 0 20px 0;
+  }
+}

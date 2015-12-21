@@ -17,7 +17,7 @@
         "scripts/customizer.js"
       ]
     },
-    "jquery.js": {
+    "jquery.min.js": {
       "bower": ["jquery"]
     }
   },

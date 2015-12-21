@@ -1,0 +1,56 @@
+.information {
+  padding: 20px 0;
+  & .fa {
+    @include transition(0.20s, all, ease-in-out);
+    font-size: 1.3rem;
+    padding-right: 3px;
+  }
+  &__title {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-weight: bold;
+    color: $secondary-color;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    color: $dark-color;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 4px;
+  }
+  &__link {
+    padding: 10px 0;
+    border-bottom: 1px solid $grey-color-1;
+    display: block;
+    text-decoration: none;
+    @include transition(0.20s, color, ease-in-out);
+
+    @media (min-width: $screen-xs-max) {
+      &:first-child {
+        border-top: 1px solid $grey-color-1;
+      }
+    }
+
+    &:hover {
+      color: darken($secondary-color, 100%);
+      text-decoration: none;
+      border-bottom: 1px solid $secondary-color;
+      & .fa {
+        padding-right: 5px;
+        color: $secondary-color;
+      }
+    }
+
+    &__copy {
+      font-family: 'Droid Serif', sans-serif;
+      font-style: italic;
+      display: block;
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      padding-right: 40px;
+      color: lighten($darkgray-color, 20%);
+      margin-left: 18px;
+    }
+  }
+}
