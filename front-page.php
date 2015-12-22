@@ -51,6 +51,18 @@
 		</div>
 	</section>
 
+
+
+<div class="owl-carousel">
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+</div>
+
 	<div class="streamerbox">
 		<div class="container-fluid">
 			<div class="row">
@@ -77,9 +89,8 @@
 						<div class="highlightbox__image"><?php the_post_thumbnail(); ?></div>
 						<div class="highlightbox__inner">
 							<h1 class="highlightbox__title"><?php the_title(); ?></h1>
-
-							<h1 class="highlightbox__subtitle"><?php the_field('description'); ?></h1>
-							<div class="highlightbox__copy"><?php the_excerpt(); ?></div>
+							<h2 class="highlightbox__subtitle"><?php the_field('description'); ?></h2>
+							<div class="highlightbox__copy"><?php echo get_the_excerpt(); ?></div>
 							<a href="<?php the_permalink(); ?>" class="link">Meer informatie</a>
 						</div>
 					</div>
@@ -136,7 +147,7 @@
 				if( $posts ): ?>
 				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 				<?php setup_postdata($post); ?>
-				<a href="/" class="information__link">
+				<a href="<?php the_permalink(); ?>" class="information__link">
 					<h3 class="information__subtitle">
 						<div class="fa fa-arrow-circle-right"></div> <?php the_title(); ?></h3>
 						<span class="information__link__copy">
@@ -150,9 +161,9 @@
 		<div class="col-xs-12 col-sm-4">
 				<?php $posts = get_field('information-center');
 				if( $posts ): ?>
-				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				<?php foreach( $posts as $post):?>
 				<?php setup_postdata($post); ?>
-				<a href="/" class="information__link">
+				<a href="<?php the_permalink(); ?>" class="information__link">
 					<h3 class="information__subtitle">
 						<div class="fa fa-arrow-circle-right"></div> <?php the_title(); ?></h3>
 						<span class="information__link__copy">
@@ -160,15 +171,15 @@
 						</span>
 					</a>
 				<?php endforeach; ?>
-				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 		</div>
 		<div class="col-xs-12 col-sm-4">
 				<?php $posts = get_field('information-right');
 				if( $posts ): ?>
-				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				<?php foreach( $posts as $post):?>
 				<?php setup_postdata($post); ?>
-				<a href="/" class="information__link">
+				<a href="<?php the_permalink(); ?>" class="information__link">
 					<h3 class="information__subtitle">
 						<div class="fa fa-arrow-circle-right"></div> <?php the_title(); ?></h3>
 						<span class="information__link__copy">
@@ -176,13 +187,10 @@
 						</span>
 					</a>
 				<?php endforeach; ?>
-				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 		</div>
 	</div>
 </div>
 </section>
-
-
-
 <?php endwhile; ?>
