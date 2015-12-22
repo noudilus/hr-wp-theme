@@ -1,7 +1,42 @@
 <?php while (have_posts()) : the_post(); ?>
 	<?php get_template_part('templates/content', 'page'); ?>
 
-	<section class="hero">
+<?php if( have_rows('homepage-slider') ): ?>
+
+	<ul class="slides">
+
+	<?php while( have_rows('homepage-slider') ): the_row();
+
+		// vars
+		$image = get_sub_field('slide-image');
+		$content = get_sub_field('slider-copy');
+		$link = get_sub_field('slider-title');
+
+		?>
+
+		<li class="slide">
+
+			<?php if( $link ): ?>
+				<a href="<?php echo $link; ?>">
+			<?php endif; ?>
+
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+
+			<?php if( $link ): ?>
+				</a>
+			<?php endif; ?>
+
+		    <?php echo $content; ?>
+
+		</li>
+
+	<?php endwhile; ?>
+
+	</ul>
+
+<?php endif; ?>
+
+<section class="hero">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
@@ -50,18 +85,6 @@
 			</div>
 		</div>
 	</section>
-
-
-
-<div class="owl-carousel">
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-</div>
 
 	<div class="streamerbox">
 		<div class="container-fluid">
