@@ -95,7 +95,7 @@
 					<div class="highlightbox__image"><?php the_post_thumbnail(); ?></div>
 					<div class="highlightbox__inner">
 						<h1 class="highlightbox__title"><?php the_title(); ?></h1>
-						<h2 class="highlightbox__subtitle"><?php the_field('description'); ?></h2>
+						<h2 class="highlightbox__subtitle"><?php the_field('subtitle'); ?></h2>
 						<div class="highlightbox__copy"><?php echo get_the_excerpt(); ?></div>
 						<a href="<?php the_permalink(); ?>" class="link">Meer informatie</a>
 					</div>

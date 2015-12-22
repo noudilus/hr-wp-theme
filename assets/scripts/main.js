@@ -20,18 +20,28 @@
     	init: function() {
         // JavaScript to be fired on all pages
         // Add smallnav class to header on scroll
-        $(window).bind('scroll', function () {
-        	if ($(window).scrollTop() > 200) {
-        		$('.navbar').addClass('smallnav');
+        jQuery(window).bind('scroll', function () {
+        	if (jQuery(window).scrollTop() > 200) {
+        		jQuery('.navbar').addClass('smallnav');
         	} else {
-        		$('.navbar').removeClass('smallnav');
+        		jQuery('.navbar').removeClass('smallnav');
         	}
         });
 
       	// Add fastclik
-        $(function() {
-        	FastClick.attach(document.body);
+      	jQuery(function() {
+      		FastClick.attach(document.body);
+      	});
+
+        // Configure homepage slider
+        $(".slides").owlCarousel({
+        	center : true,
+        	touchDrag: true,
+        	nav : true,
+        	dots : true,
+        	items : 1
         });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
