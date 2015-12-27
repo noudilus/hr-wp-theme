@@ -34,12 +34,15 @@
       	});
 
         // Configure homepage slider
-        $(".slides").owlCarousel({
-        	center : true,
-        	touchDrag: true,
-        	nav : true,
-        	dots : true,
-        	items : 1
+        $(".owl-carousel").owlCarousel({
+        	items: 1,
+        	nav: false,
+        	dots: true,
+        	autoplay: true,
+        	autoplayHoverPause:true,
+        	autoplayTimeout: 8000,
+        	animateIn: 'fadeIn',
+        	animateOut: 'fadeOut'
         });
 
       },

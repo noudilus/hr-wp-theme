@@ -2,16 +2,16 @@
 	<?php get_template_part('templates/content', 'page'); ?>
 
 	<?php if( have_rows('homepage-slider') ): ?>
-	<section class="slides">
+	<section class="slides owl-carousel owl-theme">
 
 		<?php while( have_rows('homepage-slider') ): the_row();
-			$image = get_sub_field('slider-image');
-			$title = get_sub_field('slider-title');
-			$copy = get_sub_field('slider-copy');
-			$url1 = get_sub_field('slider-url-1');
-			$url1_title = get_sub_field('slider-link-text-1');
-			$url2 = get_sub_field('slider-url-2');
-			$url2_title = get_sub_field('slider-link-text-2');
+		$image = get_sub_field('slider-image');
+		$title = get_sub_field('slider-title');
+		$copy = get_sub_field('slider-copy');
+		$url1 = get_sub_field('slider-url-1');
+		$url1_title = get_sub_field('slider-link-text-1');
+		$url2 = get_sub_field('slider-url-2');
+		$url2_title = get_sub_field('slider-link-text-2');
 		?>
 
 		<div class="hero" style="background-image: url('<?php echo $image ?>')">
@@ -32,7 +32,16 @@
 </section>
 <?php endif; ?>
 
-
+<div class="search search--top visible-xs">
+	<div class="search__wrapper">
+		<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
+			<fieldset>
+				<input type="text" class="search__input" name="s" value="<?php the_search_query(); ?>" title="Typ hier je zoekopdracht..." placeholder="Uw zoekopdracht..."/>
+				<button type="submit" class="search__icon"></button>
+			</fieldset>
+		</form>
+	</div>
+</div>
 
 <section class="quickboxes">
 	<div class="container-fluid">
@@ -95,7 +104,7 @@
 					<div class="highlightbox__image"><?php the_post_thumbnail(); ?></div>
 					<div class="highlightbox__inner">
 						<h1 class="highlightbox__title"><?php the_title(); ?></h1>
-						<h2 class="highlightbox__subtitle"><?php the_field('subtitle'); ?></h2>
+						<h2 class="highlightbox__subtitle"><?php the_field('description'); ?></h2>
 						<div class="highlightbox__copy"><?php echo get_the_excerpt(); ?></div>
 						<a href="<?php the_permalink(); ?>" class="link">Meer informatie</a>
 					</div>
@@ -106,7 +115,7 @@
 	</div>
 
 	<sidebar class="sidebar sidebar--top">
-		<div class="search search--top">
+		<div class="search hidden-xs">
 			<div class="search__wrapper">
 				<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 					<fieldset>
@@ -124,14 +133,14 @@
 				<div class="attention__copy attention__copy--quote">
 					<?php the_field('home-review-copy'); ?>
 				</div>
-				<a href="/" class="link">Meer reacties</a>
+				<a href="/reacties" class="link">Naar reactiepagina</a>
 			</div>
 		</div>
-		<a href="/" class="book">
+		<a href="/mijn-persoonlijke-uitvaart" class="book">
 			<div class="book__image"></div>
 			<div class="book__wrapper">
 				<h3 class="book__title">Leg uw uitvaartwensen vast</h3>
-				<div href="/" class="book__subtitle">Vraag het gratis boekje aan
+				<div class="book__subtitle">Vraag het gratis boekje aan
 					<div class="fa fa-arrow-circle-right"></div>
 				</div>
 			</div>

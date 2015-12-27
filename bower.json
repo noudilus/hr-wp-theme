@@ -13,18 +13,6 @@
     "owl.carousel": "OwlCarousel2#~2.0.0-beta.3"
   },
   "overrides": {
-  	"owl.carousel": {
-      "main": [
-        "./src/scss/owl.theme.default.scss",
-      	"./src/scss/_mixins.scss",
-      	"./src/scss/_theme.scss",
-      	"./src/scss/owl.animate.scss",
-      	"./src/scss/owl.autoheight.scss",
-      	"./src/scss/owl.carousel.scss",
-      	"./src/scss/owl.lazyload.scss",
-      	"./dist/owl.carousel.js "
-      	]
-    },
     "bootstrap-sass": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",
@@ -39,12 +27,7 @@
         "./assets/javascripts/bootstrap/popover.js",
         "./assets/javascripts/bootstrap/scrollspy.js",
         "./assets/javascripts/bootstrap/tab.js",
-        "./assets/javascripts/bootstrap/affix.js",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+        "./assets/javascripts/bootstrap/affix.js"
       ]
     }
   }

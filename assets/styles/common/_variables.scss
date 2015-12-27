@@ -17,7 +17,6 @@ $lightblue-color: #DEE6ED;
 $font-family-01: 'Corbel', Tahoma, sans-serif;
 $font-family-02: 'Droid Serif', Georgia, sans-serif;
 
-
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
@@ -25,7 +24,9 @@ $font-family-02: 'Droid Serif', Georgia, sans-serif;
 }
 
 @mixin border-radius($size){
-  border-radius: $size;
+	-webkit-border-radius: $size;
+	-moz-border-radius: $size;
+	border-radius: $size;
 }
 
 @mixin transition($time, $all, $ease) {
