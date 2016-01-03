@@ -1,0 +1,58 @@
+.main {
+  @media (min-width: $screen-sm-min) {
+    margin: 65px auto 0 auto;
+  }
+  margin: 45px auto 0 auto;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+
+  @media (min-width: 645px) {
+    width: 66.3%;
+    padding-right: 30px;
+  }
+
+  &__headings {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #ccc;
+
+    &__title {
+      font-weight: bold;
+      color: $primary-color;
+      margin: 0 0 3px 0;
+      padding: 0;
+      font-size: 2.8rem;
+
+      @media (min-width: $screen-xs-min) {
+        font-size: 3.6rem;
+      }
+    }
+
+    &__subtitle {
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: $secondary-color;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__copy {
+    blockquote {
+      font-size: 1.6rem;
+      border-color: lighten($lightblue-color, 5%);
+      font-family: $font-family-02;
+      font-style: italic;
+    }
+  }
+}

@@ -18,7 +18,20 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
       ?>
-      <?php include Wrapper\template_path(); ?>
+      <main class="main">
+      	<div class="container-fluid">
+      		<div class="row">
+      			<article class="content">
+      				<?php include Wrapper\template_path(); ?>
+      			</article>
+      			<?php if (Setup\display_sidebar()) : ?>
+      			<aside class="sidebar">
+      				<?php include Wrapper\sidebar_path(); ?>
+      			</aside><!-- /.sidebar -->
+      		</div>
+      	</div>
+      </main><!-- /.main -->
+    <?php endif; ?>
     <?php
     do_action('get_footer');
     get_template_part('templates/footer');

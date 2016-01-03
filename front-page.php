@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-	<?php get_template_part('templates/content', 'page'); ?>
+	<?php get_template_part('templates/content', 'home'); ?>
 
 	<?php if( have_rows('homepage-slider') ): ?>
 	<section class="slides owl-carousel owl-theme">

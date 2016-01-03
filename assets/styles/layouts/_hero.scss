@@ -177,7 +177,7 @@
  	top: 55px;
  	@media (min-width: $screen-sm-min) {
  		right: 20px;
- 		top: 85px;
+ 		top: 110px;
  	}
  	-webkit-tap-highlight-color: transparent; }
  	.owl-theme .owl-dots .owl-dot {
@@ -200,9 +200,16 @@
  		-webkit-border-radius: 30px;
  		-moz-border-radius: 30px;
  		border-radius: 30px;
+ 		transition: transform 0.2s ease-in-out;
  	}
- 	.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+ 	.owl-theme .owl-dots .owl-dot.active span,
+ 	.owl-theme .owl-dots .owl-dot.active:hover span{
  		background: $secondary-color;
+ 		transform: scale(1.2);
+ 	}
+ 	.owl-theme .owl-dots .owl-dot:hover span {
+ 		background: lighten($secondary-color, 20%);
+ 		transform: scale(1.2);
  	}
 
 

@@ -25,6 +25,10 @@
   margin: 0;
   margin-bottom: 20px;
 
+  &--contentpage {
+  @include border-radius(0px 0px 4px 4px);
+  }
+
   &__input {
     font-size: 1.6rem;
     width: 100%;
@@ -98,6 +102,9 @@
     font-weight: bold;
     color: $primary-color;
     margin-bottom: 3px;
+    &--marginbottom {
+    	margin-bottom: 10px;
+    }
   }
 
   &__subtitle {
@@ -211,5 +218,54 @@
     font-size: 1.6rem;
     display: block;
     color: $secondary-color;
+  }
+}
+
+.subnav {
+  background: lighten($lightblue-color, 5%);
+  padding: 15px 20px 5px 20px;
+  @include border-radius(4px 4px 0 0);
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $secondary-color;
+    margin-top: 1px;
+  }
+
+  &__list {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+
+    &__item {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      &:last-child {
+        border: none;
+      }
+    }
+
+    & .current-menu-item a{
+    	background: rgba(255, 255, 255, 0.2);
+        color: $secondary-color;
+        text-decoration: none;
+    }
+
+    & a {
+      padding: 6px 6px 6px 20px;
+      display: block;
+      color: $primary-color;
+      margin-left: -20px;
+      margin-right: -20px;
+      text-decoration: none;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: $secondary-color;
+        text-decoration: none;
+      }
+    }
   }
 }
