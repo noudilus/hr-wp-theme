@@ -1,8 +1,8 @@
 .main {
+  margin: 25px auto;
   @media (min-width: $screen-sm-min) {
-    margin: 65px auto 0 auto;
+    margin: 90px auto 0 auto;
   }
-  margin: 45px auto 0 auto;
 }
 
 .content {

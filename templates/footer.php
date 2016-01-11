@@ -1,7 +1,6 @@
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
-        	<?php dynamic_sidebar('sidebar-footer'); ?>
             <div class="col-xs-6 col-sm-3">
                 <div class="footer__content">
                     <div class="footer__title">
@@ -10,7 +9,7 @@
                     <div class="footer__phone">
                         <i class="fa fa-phone"></i> Bel 040 780 8000
                     </div>
-                    <a href="/" class="footer__link">
+                    <a href="mailto:info@hansraaijmakers.nl" class="footer__link">
                         <i class="fa fa-envelope"></i> Stuur een bericht
                     </a>
                 </div>
@@ -24,7 +23,8 @@
                         Emopad 56
                     </div>
                     <div class="footer__copy">
-                        5663 PB Geldrop
+                        5663 PB
+                        Geldrop
                     </div>
                 </div>
             </div>
@@ -37,7 +37,8 @@
                         Aardappeleterssteegje 3
                     </div>
                     <div class="footer__copy">
-                        5671 CV Nuenen
+                        5671 CV
+                        Nuenen
                     </div>
                 </div>
             </div>
@@ -46,11 +47,14 @@
                     <div href="/" class="footer__title">
                         Social media
                     </div>
-                    <a href="/" class="footer__link">
+                    <a target="_blank" href="https://www.facebook.com/uitvaartzorghansraaijmakers?_rdr=p" class="footer__link">
                         <i class="fa fa-facebook"></i> Facebook
                     </a>
-                    <a href="/" class="footer__link">
+                    <a target="_blank" href="https://www.youtube.com/channel/UCzmFoXL0FlTh803tNPN1ncg" class="footer__link">
                         <i class="fa fa-youtube"></i> Youtube
+                    </a>
+                    <a target="_blank" href="https://twitter.com/UZRaaijmakers" class="footer__link">
+                        <i class="fa fa-twitter"></i> Twitter
                     </a>
                 </div>
             </div>

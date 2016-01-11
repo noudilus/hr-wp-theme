@@ -22,7 +22,7 @@ $defaults = array(
 wp_nav_menu( $defaults );
 ?>
 
-<div class="search search--contentpage hidden-xs">
+<div class="search search--contentpage">
 			<div class="search__wrapper">
 				<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 					<fieldset>
