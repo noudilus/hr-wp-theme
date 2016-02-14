@@ -5,6 +5,56 @@
   }
 }
 
+.contentslider {
+	height: 200px;
+	width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-bottom: 25px;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+
+  &::after {
+		content: " ";
+		background-image: linear-gradient(#000, transparent);
+		opacity: 0.25;
+		height: 20%;
+		width: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+
+  @media (min-width: $screen-xs-min) {
+		height: 325px;
+  }
+
+  &__caption {
+  	position: absolute;
+    top: 18px;
+    left: 20px;
+    padding-right: 50px;
+    color: white;
+    z-index: 3;
+
+    &:before {
+      font-size: 1.3rem;
+      color: $lightblue-color;
+      font-family: 'FontAwesome';
+      content: "\f05a";
+      padding-right: 5px;
+    }
+  }
+}
+
+.content {
+	.owl-theme .owl-dots {
+		top: 10px;
+	}
+}
+
 .content {
   width: 100%;
   position: relative;

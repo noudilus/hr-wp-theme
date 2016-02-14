@@ -5,7 +5,7 @@
 .alignnone {
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .aligncenter {
@@ -15,18 +15,24 @@
 }
 .alignleft,
 .alignright {
+	box-sizing: border-box;
   margin-bottom: ($line-height-computed / 2);
   height: auto;
+  width: 100%;
 }
 @media (min-width: $screen-sm-min) {
   // Only float if not on an extra small device
   .alignleft {
+  	width: 50%;
     float: left;
     margin-right: ($line-height-computed / 2);
+    padding-right: 20px;
   }
   .alignright {
+  	width: 50%;
     float: right;
     margin-left: ($line-height-computed / 2);
+    padding-left: 20px;
   }
 }
 

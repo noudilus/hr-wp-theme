@@ -35,6 +35,7 @@
 
         // Configure homepage slider
         $(".owl-carousel").owlCarousel({
+        	loop: true,
         	items: 1,
         	nav: false,
         	dots: true,

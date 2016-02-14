@@ -84,7 +84,7 @@
 			<div class="col-xs-12">
 				<div class="streamer">
 					<div class="streamer__title">
-						Wij zijn dag en nacht voor u bereikbaar op <span class="streamer__title--phone"><i class="fa fa-phone"></i> <strong>040780 8000</strong></span>
+						Wij zijn dag en nacht voor u bereikbaar op <span class="streamer__title--phone"><i class="fa fa-phone"></i> <strong>040 780 8000</strong></span>
 					</div>
 				</div>
 			</div>
